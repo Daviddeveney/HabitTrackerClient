@@ -1,0 +1,39 @@
+    <div class="row">
+        <div class="btn-group sm-12" data-toggle="buttons">
+            <ul class="habits">
+                <li *ngFor="let habit of habits" >
+                                {{habit.task}}
+                    <label class="btn btn-primary" >
+                        <input type="checkbox"  [(ngModel)]="habit.completed" >
+                    </label>            
+                </li>
+            </ul>            
+        </div>
+
+    <div class="col" *ngIf="progressPercentage">                 
+         <p><ngb-progressbar showValue="true" type="success" [value]="progressPercentage"></ngb-progressbar></p>
+    </div>
+    
+    </div>
+   <div class="row">
+        <div class="col">
+        <button (click)="displayArray()">Display Array</button>
+        <button (click)="gotoAnalyticsPage()"> View Analytics Page </button>
+        </div>
+    </div>
+   
+
+    <div class="col-sm-6">
+        
+    </div>
+
+
+    
+
+    
+       
+   
+
+    
+
+   
